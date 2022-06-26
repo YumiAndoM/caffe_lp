@@ -1,0 +1,388 @@
+
+
+
+body {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 15px;
+  line-height: 1.8;
+  letter-spacing: 1px;
+  word-break: break-all;
+  color: #333;
+}
+
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+li {
+  list-style: none;
+}
+
+
+
+
+
+/* ここからheader */
+
+div.header_wrapper {
+  width: 100%;
+  background-color: #fff;
+}
+
+div.inner {
+  width: 80%;
+  margin: 0 auto;
+}
+
+nav.header_nav ul {
+  width: 100%;
+  display: table;
+}
+
+nav.header_nav ul li {
+  display: table-cell;
+  /* display: flex; */
+  text-align: center;
+  padding: 2.5%;
+}
+
+nav.header_nav ul li a {
+  display: inline-block;
+  font-weight: 700;
+}
+
+nav.header_nav ul li a:hover {
+  color: #888;
+  border-bottom: solid 2px #ddd;
+}
+
+nav.header_nav ul li a span {
+  display: block;
+  margin-top: 5%;
+  font-size: 0.75rem;
+}
+
+
+
+
+/* ここからmainのトップ部分 */
+
+div.top_wrapper {
+  position: relative;
+  width: 100;
+  height: 75vh;
+  overflow: hidden;
+  background: url("../img/top.png") no-repeat center;
+  background-size: cover;
+}
+
+div.top_wrapper::after {/* バックグラウンドに入れた画像の上から、画像が明るいから少し暗くさせている。 */
+  content: "";/* 疑似要素をつくってる */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+div.top_inner {
+  position: absolute;
+  text-align: center;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* トップとレフトで位置を調整し、トランスフォームで上下左右に-50％で中央配置させるというロジック */
+}
+
+div.top_inner h1 {
+  font-size: 4.5rem;
+  font-weight: 700;
+  color: #ddd;
+}
+
+.top_inner p {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ddd;
+}
+
+
+
+
+/* ここからメインのABOUT */
+section.section {
+  padding: 10% 0;
+  border-top: solid 3px #fe9;
+}
+
+section.section:nth-of-type(odd) {
+  background-color: #eee;
+}
+
+section.about_img_1 {
+  position: relative;
+}
+
+section.about_img_1::after {
+  content: "";
+  position: absolute;
+  background: url("../img/about_1.png") no-repeat center;
+  background-size: cover;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+}
+
+section.about_img_2 {
+  position: relative;
+}
+
+section.about_img_2::after {
+  content: "";
+  position: absolute;
+  background: url("../img/about_2.png") no-repeat center;
+  background-size: cover;
+  top: 0;
+  right: 50%;
+  width: 50%;
+  height: 100%;
+}
+
+
+div.about_descript {
+  width: 40%;
+}
+  div.about_descript_right {
+    position: relative;
+    left: 60%;
+}
+
+h2.title {
+  margin-bottom: 7.5%;
+  padding-left: 2.5%;
+  line-height: 1.4;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #555;
+  border-left: solid 4px #fe9;
+}
+
+h2.title span {
+  display: block;
+  font-size: 1.5rem;
+}
+
+div.txt h3 {
+  font-size: 2rem;
+  color: #555;
+  margin-bottom: 7.5%;
+}
+
+div.txt p {
+  color: #555;
+}
+
+div.txt p strong {
+  font-weight: bold;
+  color: #555;
+  background: linear-gradient(transparent 60%, #fe9);
+}
+
+
+/* ここからProfile */
+
+div.frame_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
+div.frame {
+  width: 35%;
+  height: 100Vh;
+  background-color: #eee;
+  border-radius: 5px;
+  margin: 5%;
+  padding: 4%;
+}
+
+div.txt h3 span {
+  display: block;
+  font-size: 1rem;
+}
+
+h4.sub_title {
+  position: relative;
+  font-size: 1.2rem;
+  color: #333;
+  padding: 2% 0;
+}
+
+h4.sub_title::after {/* これでh4の隣に横棒を入れている */
+  content: "";
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  background-color: #333;
+  width: 40%;
+  height: 2px;
+  margin-top: -1px;
+}
+
+h4.sub_title span {
+  position: relative;
+  padding-right: 2%;
+}
+
+img.photo {
+  display: inline-block;
+  width: 100%;
+  height: auto;
+}
+
+p.price {
+  font-size: 1rem;
+  text-align: center;
+  color: #803333;
+}
+
+p.price span {
+  margin-right: 5px;
+  font-size: 1.2rem;
+}
+
+p.price em {
+  font-size: 3rem;
+}
+
+div.profile_bg {
+  background-color: #fff;
+  height: 60vh;
+}
+
+div.intro {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+div.intro_img {
+  padding-right: 5%;
+}
+
+div.txt ul {
+  padding: 2%;
+}
+
+div.txt ul li {
+  position: relative;
+  padding: 2% 0 0 7.5%;
+}
+
+.txt ul li:before {
+  content: "●";
+  position: absolute;
+  left: 0;
+}
+
+div.txt table th {
+  padding-right: 10px;
+  border-right: solid 3px #fe9;
+}
+
+div.txt table td {
+  padding-left: 10px;
+}
+
+
+
+
+/* ここからBLOG */
+
+div.blog_block {
+  display: inline-table;
+  margin-right: 1%;
+}
+
+div.blog_block:hover {
+  opacity: 0.5;
+}
+
+
+div.blog_body {
+  margin: 2.5% 0;
+}
+
+div.blog_body h3 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #555;
+}
+
+div.blog_body p {
+  font-size: 0.75rem;
+  color: #555;
+}
+
+
+/* ここからコンタクト */
+
+div.button {
+  text-align: center;
+  padding: 1.5%;
+  background-color: #fe9;
+  border-radius: 1.25rem;
+  width: 25%;
+  margin: 0 auto;
+}
+
+div.button:hover {
+  cursor: ponter;
+  opacity: 0.5;
+}
+
+div.button a {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+
+/* ここからFotter */
+footer.footer {
+  background-color: #555;
+  padding: 30px 0;
+  text-align: center;
+  color: #eee;
+}
+
+div.footer_logo {
+  text-align: center;
+}
+
+div.footer_logo img {
+  width: 200px;
+}
+
+ul.footer_sns {
+  text-align: center;
+}
+
+ul.footer_sns li {
+  list-style: none;
+}
+
+ul.footer_sns li a img {
+  width: 70px;
+}
+
+ful.footer_copyright {
+  text-align: center;
+  color: #eee;
+  padding: top;
+}
